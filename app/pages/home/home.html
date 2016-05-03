@@ -11,13 +11,17 @@
         </ion-card-header>
         <ion-card-content>
             Hello, {{ user }}
-            <ion-item>
-                <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var1"></ion-input>
-            </ion-item>
-            <span>+</span>
-            <ion-item>
-                <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var2"></ion-input>
-            </ion-item>
+            <ion-row>
+                <ion-col width-25>
+                    <ion-item>
+                        <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var1"></ion-input>
+                    </ion-item>
+                    <span>+</span>
+                    <ion-item>
+                        <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var2"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
             <button (click)="compute()">Compute</button>
             Total: {{ res }}
