@@ -17,7 +17,7 @@ export PATH=${PATH}:"/home/username/Android/Sdk/platform-tools"
 <br>
 node.js
 -------
-sudo apt-get install nodejs-legacy
+sudo apt-get install node
 cordova
 -------
 sudo npm install -g cordova
