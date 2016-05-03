@@ -1,16 +1,26 @@
 <ion-navbar *navbar>
-  <ion-title>
-    Home
-  </ion-title>
+    <ion-title>
+        Home
+    </ion-title>
 </ion-navbar>
 
 <ion-content class="home">
-  <ion-card>
-    <ion-card-header>
-      Card Header
-    </ion-card-header>
-    <ion-card-content>
-      Hello ,{{ user }}
-    </ion-card-content>
-  </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Card Header
+        </ion-card-header>
+        <ion-card-content>
+            Hello, {{ user }}
+            <ion-item>
+                <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var1"></ion-input>
+            </ion-item>
+            <span>+</span>
+            <ion-item>
+                <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var2"></ion-input>
+            </ion-item>
+
+            <button (click)="compute()">Compute</button>
+            Total: {{ res }}
+        </ion-card-content>
+    </ion-card>
 </ion-content>

@@ -26,7 +26,10 @@
     "cordova-plugin-splashscreen",
     "ionic-plugin-keyboard"
   ],
-  "cordovaPlatforms": [],
+  "cordovaPlatforms": [
+    "ios",
+    "android"
+  ],
   "name": "calc",
   "description": "calc: An Ionic project"
 }
