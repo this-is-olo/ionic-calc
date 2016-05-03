@@ -43,4 +43,4 @@ Build for android
 First to add the platform run from app dir: <br> ionic platform add android. <br><br>
 Then to build run: <br> ionic build android.<br>
 
-Make sure you have Android SDK and PATH set up correcrtly!
+Make sure you have Android SDK and PATH set up correcrly!
