@@ -2,6 +2,8 @@
 
 Dependencies:
 =============
+
+
 AndroidSDK
 ----------
 Install <a href="http://developer.android.com/sdk/installing/index.html">Android Studio</a>. It comes with sdk.
@@ -18,15 +20,23 @@ export PATH=${PATH}:"/home/username/Android/Sdk/platform-tools"
 node.js
 -------
 sudo apt-get install node
+
+ionic
+-----
+npm install -g ionic
+
 cordova
 -------
 sudo npm install -g cordova
+
 concurrently
 ------------
 sudo npm install -g concurrently
+
 lite-server
 -----------
 sudo npm install -g lite-server
+
 typescript
 ----------
 sudo npm install -g typescript
