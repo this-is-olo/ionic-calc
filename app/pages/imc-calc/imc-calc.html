@@ -5,30 +5,30 @@
 </ion-navbar>
 
 <ion-content class="imc-calc">
-    <div>Hello, {{firstname}} {{lastname}}!</div>
     <ion-card>
-        <ion-card-header>
-            Card Header
-        </ion-card-header>
         <ion-card-content>
-            Hello, {{ user }}
             <ion-row>
-                <ion-col width-25>
-                    <ion-item>
-                        <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var1"></ion-input>
-                    </ion-item>
-                    <span>+</span>
-                    <ion-item>
-                        <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var2"></ion-input>
-                    </ion-item>
+                <ion-col width-90>
+                    <ion-row>
+                        <ion-item>
+                            <ion-label>Greutate</ion-label>
+                            <ion-input type="number" step="1" [(ngModel)]="formValues.weight" (ngModelChange)="checkWeight($event)"></ion-input>
+                        </ion-item>
+                    </ion-row>
+                    <div class="input-hold">
+                        <ion-item>
+                            <ion-label>Inaltime</ion-label>
+                            <ion-input type="number" step="1" [(ngModel)]="inaltime_m"></ion-input>
+                            <span>.</span>
+                            <ion-input type="number" step="1" [(ngModel)]="inaltime_cm"></ion-input>
+                        </ion-item>
+                    </div>
                 </ion-col>
             </ion-row>
 
             <button (click)="compute()">Compute</button>
-            Total: {{ res }}
+            Total: {{ res }}<br>
+            <button (click)="navigate()">Get result</button>
         </ion-card-content>
     </ion-card>
-</ion-content>
-<ion-content class="home">
-    <button (click)="navigate()">Navigate to IMC-Result</button>
 </ion-content>

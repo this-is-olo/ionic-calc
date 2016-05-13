@@ -1,6 +1,14 @@
 .imc-calc {
+
   input {
     border: 1px grey solid;
     padding: 3px;
+  }
+  .unitate input {
+    width: 20px!important;
+  }
+  
+  .input-hold {
+    width: 20px;
   }
 }

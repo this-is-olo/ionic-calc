@@ -12,9 +12,30 @@ export class ImcCalc {
 
     constructor( nav) {
         this.nav = nav;
-        this.var1 = 0;
-        this.var2 = 0;
+        this.formValues = {
+            weight: 50,
+            height_m: 1,
+            height_cm: 50
+        };
+        this.weight = 50;
+        this.inaltime_m = 1;
+        this.inaltime_cm = 50;
         this.res = 0;
+    }
+
+    checkWeight(weight) {
+        weight = Number(weight);
+
+        switch(true) {
+            case (weight < 0):
+                this.weight = 0;
+                break;
+            case (weight > 999):
+                this.weight = 999;
+                break;
+            default:
+                this.weight = weight;
+        }
     }
 
     compute() {
@@ -22,6 +43,6 @@ export class ImcCalc {
     }
 
     navigate() {
-        this.nav.push(ImcRez);
+        this.nav.push(ImcRez,  {res: res});
     }
 }
