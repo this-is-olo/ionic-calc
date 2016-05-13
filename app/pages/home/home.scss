@@ -1,6 +1,6 @@
 .home {
-  input {
-    border: 1px grey solid;
-    padding: 3px;
+  .disclaimer {
+    max-height: 100px;
+    overflow-y: auto;
   }
 }

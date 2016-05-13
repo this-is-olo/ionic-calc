@@ -1,52 +1,35 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';
+import {ImcCalc} from '../imc-calc/imc-calc';
+import {HacCalc} from '../hac-calc/hac-calc';
+import {RfgCalc} from '../rfg-calc/rfg-calc';
 
 @Page({
     templateUrl: 'build/pages/home/home.html'
 })
 
 export class Home {
-    constructor() {
-        this.var1 = 0;
-        this.var2 = 0;
-        this.res = 0;
+    static get parameters(){
+        return [[NavController]];
     }
 
-    //execute(val) {
-    //    if (this.op.length == 0){
-    //        this.res = val;
-    //        return 0;
-    //    }
-    //    let crtOp = this.op.pop();
-    //    console.log(crtOp);
-    //    console.log(val);
-    //    switch (crtOp) {
-    //        case "+" :
-    //            this.res = (parseInt(this.res) || 0) + val;
-    //            break;
-    //        case "-" :
-    //            this.res = (parseInt(this.res) || 0) + val;
-    //            break;
-    //        case "/" :
-    //            this.res = (parseInt(this.res) || 0) / val;
-    //            break;
-    //        case "*" :
-    //            this.res = (parseInt(this.res) || 0) * val;
-    //            break;
-    //    }
-    //}
-    //
-    //onKey(event) {
-    //    let key = event.key || String.fromCharCode(event.keyCode);
-    //    let val = parseInt(this.eq);
-    //    if (isNaN(parseInt(key))) {
-    //        this.execute(this.num);
-    //        this.num = val;
-    //        this.op.push(key);
-    //        this.eq = "";
-    //    }
-    //}
+    constructor(nav) {
+        this.nav = nav;
+    }
 
-    compute() {
-        this.res = parseFloat(this.var1) + parseFloat(this.var2);
+    navigate(CalcType) {
+        switch (CalcType) {
+            case 'IMC':
+                this.nav.push(ImcCalc);
+                break;
+            case 'HbA1C':
+                this.nav.push(HacCalc);
+                break;
+            case 'RFG':
+                this.nav.push(RfgCalc);
+                break;
+            default:
+                console.error('Please insert valid calculator type.')
+                break;
+        }
     }
 }

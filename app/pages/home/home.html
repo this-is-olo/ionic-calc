@@ -1,30 +1,28 @@
-<ion-navbar *navbar>
-    <ion-title>
-        Home
-    </ion-title>
-</ion-navbar>
-
 <ion-content class="home">
-    <ion-card>
-        <ion-card-header>
-            Card Header
-        </ion-card-header>
-        <ion-card-content>
-            Hello, {{ user }}
-            <ion-row>
-                <ion-col width-25>
-                    <ion-item>
-                        <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var1"></ion-input>
-                    </ion-item>
-                    <span>+</span>
-                    <ion-item>
-                        <ion-input type="number" step="1" placeholder ="{{ hold }}" [(ngModel)]="var2"></ion-input>
-                    </ion-item>
-                </ion-col>
-            </ion-row>
+            <ion-card>
+                <ion-card-header>
+                    Disclaimer
+                </ion-card-header>
+                <ion-card-content class="disclaimer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac fermentum nulla. Quisque sed enim at felis consectetur cursus. Fusce eu efficitur nisi. Nunc justo mi, varius sit amet condimentum at, vulputate nec nulla. Ut lobortis vestibulum ante eget sodales. Phasellus at lacus convallis, imperdiet nisl et, imperdiet orci. Nam.
+                </ion-card-content>
+            </ion-card>
 
-            <button (click)="compute()">Compute</button>
-            Total: {{ res }}
-        </ion-card-content>
-    </ion-card>
+    <ion-row>
+        <ion-col width-80 offset-10>
+            <button block (click)="navigate('IMC')">IMC Calculator</button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col width-80 offset-10>
+            <button block (click)="navigate('HbA1C')">HbA1C Calculator</button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col width-80 offset-10>
+            <button block (click)="navigate('RFG')">RFG Calculator</button>
+        </ion-col>
+    </ion-row>
 </ion-content>
